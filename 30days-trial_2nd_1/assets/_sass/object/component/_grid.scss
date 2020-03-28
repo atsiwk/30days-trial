@@ -1,0 +1,107 @@
+@charset 'UTF-8';
+/*  Grid  */
+
+$column: 12; // グリッド数の設定
+$gutter-sp: 30px; // スマホ時の間隔
+$gutter-tab: 30px; // タブレット時の間隔
+$gutter-lap: 30px; // ラップトップ時の間隔
+// $gutter-desk: 40px; // デスクトップ時の間隔
+
+$gutter-sp-top: 20px;
+$gutter-tab-top: 20px;
+$gutter-lap-top: 20px;
+
+.c-grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: - $gutter-sp;
+  margin-top: - $gutter-sp-top;
+
+    &__item {
+      margin-left: $gutter-sp;
+      margin-top: $gutter-sp-top;
+
+    @for $i from 1 through $column {
+      &.-col-sp-#{$i} {
+        $percent: percentage($i / $column);
+        width:calc(#{$percent} - #{$gutter-sp});
+      }
+    }
+
+      &.-col-sp-five { //５列の場合
+      width: 20%;
+    }
+  }
+}
+
+@include mq(tab) {
+  .c-grid {
+  margin-left: - $gutter-tab;
+  margin-top: - $gutter-tab-top;
+
+      &__item {
+        margin-left: $gutter-tab;
+        margin-top: $gutter-tab-top;
+
+      @for $i from 1 through $column {
+        &.-col-tab-#{$i} {
+          $percent: percentage($i / $column);
+          width:calc(#{$percent} - #{$gutter-tab});
+        }
+      }
+
+        &.-col-tab-five { //５列の場合
+        width: 20%;
+      }
+    }
+  }
+
+}
+
+@include mq(lap) {
+  .c-grid {
+  margin-left: - $gutter-lap;
+  margin-top: - $gutter-lap-top;
+
+      &__item {
+        margin-left: $gutter-lap;
+        margin-top: $gutter-lap-top;
+
+      @for $i from 1 through $column {
+        &.-col-lap-#{$i} {
+          $percent: percentage($i / $column);
+          width:calc(#{$percent} - #{$gutter-lap});
+        }
+      }
+
+        &.-col-tab-five { //５列の場合
+        width: 20%;
+      }
+    }
+  }
+
+}
+
+// @include mq(desk) {
+//   .c-grid {
+//   margin-left: - $gutter-desk;
+//   margin-top: - $gutter-desk;
+
+//       &__item {
+//         margin-left: $gutter-desk;
+//         margin-top: $gutter-desk;
+
+//       @for $i from 1 through $column {
+//         &.-col-desk-#{$i} {
+//           $percent: percentage($i / $column);
+//           width:calc(#{$percent} - #{$gutter-desk});
+//         }
+//       }
+
+//         &.-col-tab-five { //５列の場合
+//         width: 20%;
+//       }
+//     }
+//   }
+
+// }

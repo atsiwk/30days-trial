@@ -1,0 +1,44 @@
+@charset 'UTF-8';
+/*  Heading  */
+
+.l-heading {
+  text-align: center;
+}
+
+.c-heading {
+
+  &.-primary {
+    margin: set-size(32px,32px) auto set-size(60px,32px);
+    font-weight: bold;
+    font-size: set-size(32px);
+    color:$heading-color;
+    display: inline-block;
+    position: relative;
+    line-height: 1.283333;
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom:set-size(-44px,60px);
+      left: 50%;
+      transform: translateX(-50%);
+      display: block;
+      height: 5px;
+      background-color: $main-color;
+      width: set-size(76px,60px);
+    }
+
+
+
+    @include mq(tab) {
+    font-size: set-size(48px);
+    margin: set-size(48px,48px) 0 set-size(80px,48px);
+
+    }
+
+    @include mq(lap) {
+    margin: set-size(68px,60px) 0 set-size(113px,60px);
+    font-size: set-size(60px);
+    }
+  }
+}

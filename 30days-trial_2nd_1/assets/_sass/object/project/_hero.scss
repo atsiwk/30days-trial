@@ -1,0 +1,122 @@
+@charset 'UTF-8';
+/*  Hero Image  */
+
+.p-hero {
+  color: $heading-color;
+  font-weight: bold;
+  position: relative;
+
+    &__body {
+      position: absolute;
+      top: 35.714%;
+      width: 100%;
+      text-align: center;
+
+      @include mq(tab, max) {
+      top: 50%;
+      transform: translateY(-50%);
+      }
+    }
+
+    &__title {
+      font-size: vw-size(68px);
+      white-space: nowrap;
+
+      @include mq(tab, max) {
+        font-size:2em;
+        white-space: normal;
+        width: 95%;
+        margin: 0 auto;
+      }
+    }
+
+    &__text {
+      font-size: vw-size(38px);
+
+      @include mq(tab, max) {
+        font-size:1.5em;
+        width: 95%;
+        margin: 0 auto;
+      }
+
+    }
+
+    &__image img {
+      width: 100%;
+
+      @include mq(tab, max) {
+        height: 100vh;
+        object-fit:cover;
+        font-family: 'object-fit: cover;';  /*IE対策*/
+
+      }
+    }
+
+    &__button {
+      $font-size:38px;
+      font-size: vw-size(38px);
+      margin-top: vw-size(82px);
+      padding: set-size(17px,$font-size) set-size(81px,$font-size);
+      background-color: $main-color;
+      color: $button-text-color;
+      border-radius: set-size(12px, $font-size);
+
+      @include mq(tab, max) {
+        font-size:1.5em;
+        margin-top: set-size(60px);
+      }
+
+    }
+}
+
+// Swiper
+.swiper-container{
+    overflow: hidden;
+
+}
+.swiper-button-prev,
+.swiper-button-next {
+  width: 5.49vw;
+  height: 5.49vw;
+
+  @include mq(tab,max){
+    width: 36px;
+    height: 36px;
+  }
+}
+
+.swiper-button-prev {
+  left: 11.56vw;
+
+  @include mq(tab,max){
+    left:5%
+  }
+
+}
+
+.swiper-button-next {
+  right: 11.56vw;
+
+  @include mq(tab,max){
+    right:5%
+  }
+
+}
+
+
+.swiper-button-prev {
+    background: url(../images/arrow-prev.svg) no-repeat center center / contain;
+}
+.swiper-button-next {
+    background: url(../images/arrow-next.svg) no-repeat center center / contain;
+}
+
+.swiper-pagination-bullet {
+  width: 16px;
+  height: 16px;
+  background-color: #fff;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #2F7DC8;
+}

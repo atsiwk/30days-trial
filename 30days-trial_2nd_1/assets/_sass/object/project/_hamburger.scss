@@ -1,0 +1,80 @@
+@charset 'UTF-8';
+/*  Hamburger Button  */
+
+.p-hamburger {
+  border:none;
+  appearance: none;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right:2.5%;
+  z-index: 1;
+  width: 24px;
+  height: 24px;
+  margin: auto 0;
+  background-color: transparent;
+  outline: none;
+
+    &:focus {
+      box-shadow: 0 0 .5em rgba(255, 255, 255, 0.404);
+    }
+
+    @include mq(tab) {
+      display: none;
+    }
+}
+
+
+.p-hamburger__Line {
+    position: absolute;
+    top:0;
+    left:0;
+    right: 0;
+    bottom:0;
+    display: block;
+    width: 18px;
+    height: 2px;
+    margin: auto;
+    border-radius: 4px;
+    background-color: $header-text-color;
+
+  &:before,
+  &:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: inherit;
+    position: absolute;
+    border-radius: 4px;
+    transition: all .2s ease-in-out;
+  }
+
+    &:before {
+      top: -5px;
+    }
+
+    &:after {
+      top: 5px;
+    }
+}
+
+.is-active-drawer .p-hamburger__Line {
+  background-color: transparent;
+
+  &:before,
+  &:after {
+    top:0;
+    background-color: $drawer-text-color;
+  }
+
+  &:before {
+    transform: rotate(45deg);
+  }
+
+  &:after {
+    transform: rotate(-45deg);
+  }
+
+}

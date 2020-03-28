@@ -1,0 +1,95 @@
+@charset 'UTF-8';
+/*
+  Footer
+-----------------------------------------------------*/
+
+.l-footer {
+  clear: both;
+  background: linear-gradient($background-color-footer-1, $background-color-footer-2);
+  color: $secondary-text-color;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: set-size(74px) 0 set-size(91px);
+
+    @include mq(tab,max){
+    display: block;
+    padding: set-size(48px) 0 set-size(48px);
+    }
+  }
+
+  &__company {
+    text-align: center;
+    margin-bottom: set-size(24px);
+  }
+
+  &__logo {
+    margin-bottom: set-size(30px);
+  }
+
+  &__address {
+    margin-bottom: set-size(13px);
+  }
+
+  &__nav {
+    display: flex;
+
+    @include mq(tab,max){
+      margin: 0 auto;
+      margin-bottom: set-size(24px);
+      justify-content: space-between;
+
+    }
+
+
+    li a {
+      color:$secondary-text-color;
+      text-decoration: none;
+    }
+
+    li + li {
+      margin-left: set-size(30px);
+
+      @include mq(tab,max){
+      margin-left: 0;
+      }
+    }
+  }
+
+  &__sns {
+    display: flex;
+    margin-left: set-size(62px);
+
+    @include mq(lap,max){
+      margin-left: 0;
+    }
+
+    @include mq(tab,max){
+      font-size: set-size(12px);
+      margin: 0 auto;
+      justify-content: space-around;
+    }
+
+    li {
+      margin-right: set-size(16px);
+
+      @include mq(tab,max){
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__copyright {
+    font-size: set-size(14px);
+    padding-bottom: set-size(31px);
+  }
+
+  &__pagetop {
+    position: fixed;
+    right: 19px;
+    bottom: 14px;
+
+  }
+
+}

@@ -1,0 +1,55 @@
+@charset 'UTF-8';
+/*
+  Section
+-----------------------------------------------------*/
+
+.l-section {
+  &__card {
+    padding-bottom: set-size(142px);
+
+    @include mq(tab, max) {
+      padding-bottom: set-size(48px);
+    }
+  }
+
+  &__news {
+    background-color: $background-color-2;
+    padding-bottom: set-size(38px);
+    margin: 0 auto;
+
+    @include mq(tab, max) {
+      padding-bottom: set-size(48px);
+    }
+  }
+
+  &__price {
+    padding-bottom: set-size(103px);
+
+    @include mq(tab, max) {
+      padding-bottom: set-size(48px);
+    }
+  }
+
+  &__access {
+    background-color: $background-color-2;
+    padding-bottom: set-size(88px);
+
+    @include mq(tab, max) {
+      padding-bottom: set-size(48px);
+    }
+  }
+
+  &__qa {
+    padding-bottom: set-size(76px);
+  }
+
+    &__contact {
+    padding-bottom: set-size(122px);
+    // background-color: $background-color-2;
+
+    @include mq(tab, max) {
+      padding-bottom: set-size(48px);
+    }
+  }
+
+}

@@ -1,0 +1,135 @@
+@charset 'UTF-8';
+/*  Privacy  */
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .5);
+  z-index: 2;
+}
+
+.p-privacy {
+  display: none;
+  position: fixed;
+  top:0;
+  left: 0;
+  right: 0;
+  bottom:0;
+  background-color: #fff;
+  z-index: 3;
+  width: 930px;
+  max-height: 610px;
+  margin: auto;
+  padding: set-size(65px) set-size(56px) set-size(20px) set-size(84px);
+
+  @include mq(lap,max){
+  width: 80%;
+  height: 80%;
+  padding: set-size(32px) set-size(24px) set-size(20px) set-size(32px);
+  }
+
+  &__content {
+
+    @include mq(lap,max){
+      height: 60%;
+      overflow: auto;
+    }
+  }
+
+
+    &__heading-3 {
+    font-size: set-size(24px);
+    position: relative;
+    text-align: center;
+    margin-bottom:set-size(73px,24px);
+    font-weight: bold;
+
+    @include mq(tab,max) {
+      font-size: set-size(20px);
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom:set-size(-24px,24px);
+      left: 50%;
+      transform: translateX(-50%);
+      display: block;
+      height: 2px;
+      background-color: $main-color;
+      width: set-size(155px,24px);
+    }
+  }
+
+  &__heading-4 {
+    font-size: set-size(20px);
+    position: relative;
+    margin-bottom:set-size(18px,20px);
+    font-weight: bold;
+    line-height: 1;
+
+    @include mq(tab,max) {
+      font-size: set-size(18px);
+    }
+
+
+    &:before {
+      content: '';
+      position: absolute;
+      left:set-size(-28px,20px);
+      display: block;
+      width: 3px;
+      height: 20px;
+      background-color: $main-color;
+
+      @include mq(lap,max){
+        left:set-size(-10px,18px);
+        height: 18px;
+      }
+
+    }
+  }
+
+  &__text {
+    margin-bottom:set-size(44px,16px);
+
+    @include mq(tab,max) {
+      font-size: set-size(14px);
+    }
+  }
+
+  &__button {
+    font-size: set-size(16px);
+    background-color:$main-color;
+    padding: set-size(7px,16px) set-size(66px,16px);
+    border-radius: 12px;
+    color: $button-text-color;
+    font-weight: bold;
+
+    @include mq(lap,max){
+      margin-top: 2em;
+    }
+  }
+
+  &__circleButton {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(50%,-50%);
+    width: set-size(43px);
+    height: set-size(43px);
+    border-radius: 50%;
+    background:$main-color url(../images/btn-batsu.svg) no-repeat;
+    z-index: 5;
+    cursor: pointer;
+
+    &:hover {
+      opacity: .8;
+    }
+  }
+
+}

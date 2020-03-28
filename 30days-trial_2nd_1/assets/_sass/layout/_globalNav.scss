@@ -1,0 +1,84 @@
+@charset 'UTF-8';
+/*
+  GlobalNav
+-----------------------------------------------------*/
+
+.l-globalNav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  padding-top: set-size(120px);
+  width: 100%;
+  height: 100%;
+  background-color: $background-color-drawer;
+  transition: transform .3s ease-in-out;
+  transform: translateX(100%);
+
+
+    & li a {
+    text-align: center;
+    display: block;
+    padding: set-size(16px);
+    color: $secondary-text-color;
+    text-decoration: none;
+    font-weight: 500;
+
+    &:hover {
+      background-color: $main-color - #111;
+      color: #fff;
+    }
+  }
+
+  @include mq(tab) {
+    position: static;
+    padding: 0;
+    background-color: transparent;
+    transform: translateX(0);
+    display: flex;
+
+    & li + li {
+      margin-left: set-size(30px);
+    }
+
+    & li a {
+      color: $secondary-text-color;
+      padding: 0;
+      position: relative;
+
+      &:before
+      {
+        position: absolute;
+        bottom: -4px;
+        content: "";
+        display: inline-block;
+        width: 100%;
+        height: 3px;
+        background: transparent;
+        transition: .3s;
+      }
+
+
+      &:hover:before {
+        background-color: $accent-color;
+      }
+
+      &:hover {
+        background-color: transparent;
+        transform: scale(1, 1);
+      }
+
+
+    }
+  }
+
+}
+
+.is-active-drawer .l-globalNav {
+  transform: translateX(0);
+}
+
+.js-menu a.border:before {
+  background-color: $accent-color;
+}
