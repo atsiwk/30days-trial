@@ -1,0 +1,22 @@
+@charset 'UTF-8';
+/*  Contact  */
+
+.p-contact {
+
+
+  &__heading {
+    max-width: 960px;
+    background: url(../images/contact1.png);
+    margin: 0 auto;
+    background-size: cover;
+    border-radius: 12px 12px 0 0;
+    padding: 0 set-size(16px);
+  }
+
+  &__headingText {
+    text-align: center;
+    font-size: set-size(14px);
+    color: $secondary-text-color;
+    padding-bottom: set-size(36px, 14px);
+  }
+}

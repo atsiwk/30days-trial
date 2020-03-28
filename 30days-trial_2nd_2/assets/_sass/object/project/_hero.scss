@@ -1,0 +1,81 @@
+@charset 'UTF-8';
+/*  Hero Image  */
+
+.p-hero {
+  color: $hero-text-color;
+  position: relative;
+
+    &__body {
+      position: absolute;
+      top: 28.4857%;
+      width: 100%;
+      text-align: center;
+
+      @include mq(tab) {
+        top: 33.9506%;
+        left: 53.66%;
+        width: vw-size(530px);
+        text-align: left;
+
+      }
+    }
+
+    &__title {
+      font-size: 6.4vw;
+      font-weight: bold;
+      margin-bottom: set-size(24px,24px);
+      padding-left: set-size(16px,24px);
+      text-align: left;
+      line-height: 2;
+
+      @include mq(tab) {
+        font-size: vw-size(30px);
+        margin-bottom: vw-size(40px);
+      }
+    }
+
+    &__text {
+      font-size: 4.266666vw;
+      margin-bottom: set-size(40px);
+      padding: 0 set-size(16px);
+      text-align: left;
+
+      @include mq(tab) {
+        font-size: vw-size(18px);
+        margin-bottom: vw-size(40px);
+        padding: 0;
+      }
+
+    }
+
+    &__image img {
+      height: 100vh;
+      font-family: 'object-fit: cover; object-position: 24% 0%;';
+      object-fit: cover;
+      object-position: 24% 0%;
+      width: 100%;
+
+      @include mq(tab) {
+        height: auto;
+      }
+    }
+
+    &__button {
+      font-size: set-size(18px);
+      padding: set-size(14px,18px) set-size(24px,18px);
+      background-color: $key-color-1;
+      color: $button-text-color;
+      border-radius: set-size(12px, 18px);
+     box-shadow: 0px 3px 5px #00000033;
+
+      &:hover {
+        background-color: #F18900;
+      }
+
+      @include mq(tab) {
+        font-size: vw-size(18px);
+        padding: set-size(14px,18px) set-size(48px,18px);
+      }
+
+    }
+}

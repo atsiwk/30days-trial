@@ -1,0 +1,187 @@
+@charset 'UTF-8';
+/*
+  Section
+-----------------------------------------------------*/
+
+.l-section {
+
+  &__news {
+    position: relative;
+    top: -40px;
+    margin-bottom: set-size(20px);
+
+    @include mq(tab) {
+      position: static;
+      margin: set-size(130px) 0;
+    }
+
+  }
+
+  &__newsBox {
+    background-color: #fff;
+    box-shadow: 0px 5px 12px #3E3E3E33;
+
+    @include mq(tab) {
+      padding: 0 set-size(50px);
+    }
+  }
+
+  &__service {
+    padding-bottom: set-size(60px);
+    background: linear-gradient(180deg,$main-color 0%,$main-color 50%,$background-color 50%,$background-color 100%);
+
+    @include mq(tab) {
+      padding-bottom: set-size(130px);
+    }
+  }
+
+  &__serviceBox {
+    padding: set-size(40px) set-size(16px);
+    background-color: #fff;
+    box-shadow: 0px 5px 12px #3E3E3E33;
+
+    @include mq(tab){
+      display: flex;
+      padding: set-size(54px) set-size(48px);
+      max-width: 960px;
+      margin: 0 auto;
+    }
+  }
+
+  &__results {
+    .c-heading {
+      @include mq(tab){
+        padding: set-size(80px,36px) 0;
+        text-align: left;
+      }
+    }
+  }
+
+  &__resultsBox {
+    background-color: $main-color;
+    padding-bottom:set-size(40px);
+
+    @include mq(tab){
+      padding-left:set-size(110px);
+      padding-bottom:set-size(80px);
+      position: relative;
+      margin-left: set-size(93px);
+    }
+  }
+
+  &__price {
+
+    padding-bottom: set-size(103px);
+
+    @include mq(tab) {
+      padding-bottom: set-size(280px);
+    }
+  }
+
+  &__price .c-heading {
+      padding: set-size(80px,36px) 0;
+  }
+
+  &__comments {
+    .c-heading {
+      text-align: left;
+
+      @include mq(tab) {
+        padding: set-size(80px,36px) 0;
+      }
+
+    }
+    background-color: $main-color;
+  }
+
+  &__commentsBox {
+    position: relative;
+    top: set-size(-60px);
+    background-color: #fff;
+    padding: 0 set-size(20px) set-size(40px);
+    box-shadow: 0px 5px 12px #3E3E3E33;
+
+    @include mq(tab) {
+      max-width: 644px;
+      padding: 0 set-size(40px) set-size(132px);
+      top: set-size(-130px);
+      width: 54.5%;
+    }
+  }
+
+  &__commentsImage {
+    display: none;
+
+    @include mq(tab) {
+      display: block;
+      position: absolute;
+      top: 120px;
+      right: 0;
+      transform: translateX(100%);
+      width: 83.38%;
+    }
+
+    img {
+      width:100%;
+    }
+  }
+
+
+  &__qa {
+    background: url(../images/sunyu-kim-1053375-unsplash.png) no-repeat center center;
+    padding-bottom: set-size(40px);
+
+        @include mq(tab){
+          background-size:cover;
+        }
+
+      .c-heading {
+        @include mq(tab){
+          padding: set-size(80px,36px) 0;
+          text-align: left;
+          margin-left: 50%;
+        }
+      }
+  }
+
+  &__access {
+    background-color: $main-color;
+    padding-bottom: set-size(48px);
+
+    @include mq(tab) {
+      margin-bottom: set-size(216px);
+    }
+
+    .c-heading {
+      text-align: left;
+      @include mq(tab){
+        padding: set-size(130px,36px) 0 set-size(40px,36px);
+      }
+    }
+
+    @include mq(tab) {
+      padding-bottom: set-size(178px);
+    }
+  }
+
+
+
+    &__contact {
+      background:url(../images/alex-blajan-159378-unsplash.png);
+      padding: set-size(40px) 0;
+
+        @include mq(tab) {
+          padding: set-size(80px) 0;
+        }
+
+      .c-heading {
+        padding: set-size(32px,30px) 0 set-size(10px,30px);
+
+        @include mq(tab){
+        padding: set-size(62px,36px) 0 set-size(12px,36px);
+      }
+    }
+
+  }
+
+}

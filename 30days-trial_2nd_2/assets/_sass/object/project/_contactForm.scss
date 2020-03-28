@@ -1,0 +1,303 @@
+@charset 'UTF-8';
+/*  Contact Form  */
+
+.p-contactForm {
+  margin-top: set-size(-28px);
+  max-width: 960px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: set-size(40px) set-size(16px);
+  border-radius: 0 0 12px 12px;
+
+    @include mq(tab) {
+      padding: set-size(60px) set-size(90px);
+    }
+
+  &__row {
+    dt {
+      font-size: set-size(16px);
+
+      @include mq(tab) {
+      font-size: set-size(22px);
+      }
+    }
+  }
+
+  &__row + &__row:not(:last-child) {
+    margin-top: set-size(40px);
+  }
+
+  &__row:last-child {
+    margin-top: set-size(40px);
+  }
+
+  &__label {
+      padding: 0;
+      margin-bottom: set-size(10px,16px);
+
+      @include mq(tab) {
+        margin-bottom: 0;
+      }
+  }
+
+  &__label.-left {
+    @include mq(tab) {
+      float: left;
+      width: 35.2%;
+    }
+  }
+
+  &__name, &__furigana, &__mail, &__content, &__type {
+    appearance: none;
+    background-color: transparent;
+    border: 1px solid #707070;
+    border-radius: 0;
+    color: inherit;
+    font-family: inherit;
+    font-size: set-size(16px);
+    padding: set-size(6px) set-size(10px);
+    width: 100%;
+
+  }
+
+  &__name, &__furigana, &__mail, &__type {
+    @include mq(tab) {
+      width: 64.8%;
+    }
+  }
+
+  &__name, &__furigana, &__mail {
+    border: transparent;
+    border-bottom: 1px solid #3E3E3E;
+
+    &::placeholder {
+     font-size: set-size(16px);
+
+     @include mq(tab){
+     font-size: set-size(22px);
+     }
+    }
+
+    &:hover, &:focus {
+      outline: none;
+      box-shadow: 0px 5px 5px -5px rgba(120, 151, 251, 0.527);
+      border-bottom: 1px solid #7897FB;
+    }
+
+  }
+
+
+
+  .required {
+    position: relative;
+  }
+
+  .required:after {
+    content: '必須';
+      font-size: set-size(14px);
+      padding: set-size(2px,14px) set-size(11px,14px);
+      background-color: $key-color-3;
+      color: $secondary-text-color;
+      border-radius: 5px;
+      margin-left: set-size(20px,14px);
+
+    }
+
+  &__content {
+    height: set-size(160px);
+    margin-bottom: set-size(20px);
+
+    &:hover, &:focus {
+      border: 1px solid #7897FB;
+      box-shadow: 0px 1px 3px #7897FB;
+    }
+
+
+    @include mq(tab){
+      width: 100%;
+    }
+  }
+
+  &__type {
+    cursor: pointer;
+    background:transparent url(../images/select-arrow.svg) no-repeat no-repeat center right 16px/16px 16px;
+
+    &:hover {
+      border: 1px solid #7897FB;
+      box-shadow: 0px 1px 3px #7897FB;
+    }
+  }
+
+
+
+  &__radio {
+    display: none;
+  }
+
+  &__radioText {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    padding: set-size(4px) 0 set-size(4px) set-size(27px);
+
+    @include mq(tab){
+     font-size: set-size(22px);
+    }
+  }
+
+  &__radioText + &__radioText {
+      margin-left: set-size(95px,16px);
+    }
+
+
+  &__radio + span:before {
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.16);
+    border-radius: 50%;
+    content: "";
+    display: block;
+    height: 12px;
+    left: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 12px;
+  }
+
+  &__radio + span:hover:before {
+    border: 1px solid #7897FB;
+    box-shadow: 0px 1px 4px #7897FB;
+  }
+
+  &__radio + span:active:before {
+    border: 1px solid #7897FB;
+    box-shadow: 0px 1px 4px #7897FB;
+    background-color: #D1D9F5;
+  }
+
+
+  &__radio + span:after {
+    background: $key-color-2;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    content: "";
+    height: 6px;
+    left: 3px;
+    opacity: 0;
+    padding: 2px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.3s ease 0s;
+    width: 6px;
+  }
+
+  &__radio:checked + span:after {
+    opacity: 1;
+  }
+
+  &__checkbox {
+    display: none;
+  }
+
+  &__checkboxWrapper {
+    text-align: center;
+
+    @include mq(tab) {
+      text-align: left;
+    }
+  }
+
+  &__checkbox + span {
+    cursor: pointer;
+    display: inline-block;
+    padding-left: set-size(36px);
+    position: relative;
+    margin-bottom: set-size(20px);
+
+    @include mq(tab){
+      font-size: set-size(18px);
+      margin-bottom: set-size(30px);
+    }
+  }
+
+  &__checkbox + span:before {
+    background: #fff;
+    border: 1px solid #707070;
+    border-radius: 2px;
+    content: "";
+    display: block;
+    height: set-size(18px);
+    left: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: set-size(18px);
+  }
+
+  &__checkbox + span:hover:before {
+    border: 1px solid #7897FB;
+    box-shadow: 0px 1px 4px #7897FB;
+  }
+
+  &__checkbox + span:active:before {
+    border: 1px solid #7897FB;
+    box-shadow: 0px 1px 4px #7897FB;
+    background-color: #D1D9F5;
+  }
+
+  &__checkbox + span:after {
+    border-bottom: 2px solid $key-color-2;
+    border-left: 2px solid $key-color-2;
+    content: "";
+    display: block;
+    height: .5em;
+    left: set-size(3px);
+    margin-top: -0.2em;
+    opacity: 0;
+    position: absolute;
+    top: 55%;
+    transform: translateY(-50%) rotate(-45deg);
+    transition: all 0.3s ease 0s;
+    width: .8em;
+  }
+
+  &__checkbox:checked + span::after {
+    opacity: 1;
+  }
+
+  &__button {
+    position: relative;
+    appearance: none;
+    background-color:$key-color-1;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    font-size: set-size(18px);
+    font-weight: bold;
+    padding: set-size(14px,18px) set-size(24px,18px);
+    text-decoration: none;
+    box-shadow: 0px 3px 5px #00000033;
+
+      &:hover {
+        background-color: #F18900;
+      }
+
+
+    @include mq(tab) {
+      padding: set-size(14px,18px) set-size(50px,18px);
+    }
+
+  }
+
+  &__buttonWrapper {
+    text-align: center;
+
+    @include mq(tab) {
+      text-align: left;
+    }
+  }
+
+
+}

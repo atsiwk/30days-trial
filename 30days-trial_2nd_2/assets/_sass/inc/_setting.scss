@@ -1,0 +1,88 @@
+@charset 'UTF-8';
+
+// -----------------------------------
+//  Layout Settings
+//------------------------------------
+
+// Contentの幅
+$content-width: 1180px;
+
+// ブレークポイント
+$breakpoints: (
+  'sp': 480px,
+  'tab': 768px,
+  'lap': 1024px,
+  'desk': 1200px,
+)!default;
+
+
+//====================================
+//  Color Settings
+//====================================
+
+// メインカラー
+$main-color: #3e3e3e;
+
+// キーカラー
+$key-color-1: #ffaa3b;
+$key-color-2: #4973ff;
+$key-color-3: #ff4646;
+
+// テキストの色
+$primary-text-color: #3e3e3e;
+$secondary-text-color: #fff;
+$button-text-color: $secondary-text-color;
+
+// ヘッダーカラー
+$header-color: rgba(255, 255, 255, 0.1);
+// ヘッダーテキスト
+$header-text-color: $primary-text-color;
+
+// ドロワーテキスト
+$drawer-text-color: $primary-text-color;
+// ドロワー背景色
+$background-color-drawer:#fff;
+
+// ヒーローテキストカラー
+$hero-text-color:$primary-text-color;
+
+//見出しの色
+$heading-color-1:$primary-text-color;
+$heading-color-2:$secondary-text-color;
+
+// 背景色
+$background-color:#F3F3F3;
+
+//フッター背景色 グラデーション
+$background-color-footer:$main-color;
+
+
+
+
+//ボタンの色
+$button-color:$main-color;
+
+// borderカラー
+$border-color:$main-color;
+
+//table カラー
+$table-color:$main-color;
+
+// ラベルの色
+$label-color:$key-color-2;
+
+
+// SNSボタン ３色
+$circle-color-1:#55ACEE;
+$circle-color-2:#3B5998;
+$circle-color-3:#D93177;
+
+
+
+//====================================
+//  Typeface
+//====================================
+$font-set-primary: '游ゴシック' , 'Yu Gothic' , '游ゴシック体' , 'YuGothic' , 'ヒラギノ角ゴ Pro W3' , 'Hiragino Kaku Gothic Pro' , 'Meiryo UI' , 'メイリオ' , Meiryo , sans-serif;
+$font-set-english: 'Montserrat', sans-serif;
+
+$base-font-size: 16px;

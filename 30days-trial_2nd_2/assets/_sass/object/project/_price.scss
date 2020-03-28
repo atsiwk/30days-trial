@@ -1,0 +1,42 @@
+@charset 'UTF-8';
+/*  Price  */
+
+.p-price {
+
+  &__tableWrapper {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  &__table {
+    font-size: set-size(20px);
+    margin-bottom: set-size(14px);
+    line-height: 1;
+    width: 100%;
+    vertical-align: middle;
+
+    th {
+      text-align: center;
+      background-color: $table-color;
+      font-weight: bold;
+      color: $secondary-text-color;
+      padding: set-size(20px,20px);
+      width: 30%;
+      border: solid 1px #707070;
+    }
+
+    td {
+      font-weight: bold;
+      width: 100%;
+      background-color: #fff;
+      padding-left: 1em;
+      width: 70%;
+      border: solid 1px #707070;
+
+    }
+  }
+
+  &__note {
+    font-size: set-size(12px);
+  }
+}

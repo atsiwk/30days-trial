@@ -1,0 +1,42 @@
+@charset 'UTF-8';
+/*  Service  */
+
+.p-service {
+  text-align: center;
+
+  & + & {
+    margin-top: set-size(65px);
+
+    @include mq(tab) {
+      margin-top: 0;
+      margin-left: set-size(86px);
+    }
+  }
+
+  &__name {
+    font-size: set-size(18px);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.035em;
+    margin-bottom: set-size(24px,18px);
+
+    span {
+      display: block;
+    }
+
+    @include mq(tab) {
+      font-size: set-size(20px);
+    margin-bottom: set-size(20px,20px);
+    }
+  }
+
+  &__image {
+    margin-bottom: set-size(28px);
+  }
+
+  &__text {
+    font-size: set-size(14px);
+    text-align: left;
+  }
+
+}

@@ -1,0 +1,26 @@
+@charset 'UTF-8';
+/*  Heading  */
+
+
+
+.c-heading {
+  text-align: center;
+  padding: set-size(40px,30px) 0 set-size(40px,30px);
+  font-weight: 600;
+  font-size: set-size(30px);
+  position: relative;
+  line-height: 1.22;
+
+  &.-primary {
+    color:$heading-color-1;
+  }
+
+  &.-secondary {
+    color:$heading-color-2;
+  }
+
+    @include mq(tab) {
+      font-size: set-size(36px);
+      padding: set-size(60px,36px) 0;
+    }
+}

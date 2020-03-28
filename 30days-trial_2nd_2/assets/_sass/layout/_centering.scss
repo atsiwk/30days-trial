@@ -1,0 +1,15 @@
+@charset 'UTF-8';
+/*
+  Centering
+-----------------------------------------------------*/
+
+.l-container {
+  margin: 0 auto;
+  max-width: $content-width;
+  width: calc(100% - 32px);
+
+}
+
+.l-center {
+  text-align: center;
+}

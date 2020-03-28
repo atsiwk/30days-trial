@@ -1,0 +1,36 @@
+@charset 'UTF-8';
+/*
+  Header
+-----------------------------------------------------*/
+.l-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  background-color: #fff;
+
+  @include mq(tab) {
+    background-color: $header-color;
+  }
+
+  &__wrapper {
+  height: 68px;
+  display: flex;
+  align-items: center;
+
+    @include mq(tab){
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &__logo {
+    @include mq(tab){
+      display: none;
+    }
+  }
+
+}

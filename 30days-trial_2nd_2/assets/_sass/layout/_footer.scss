@@ -1,0 +1,116 @@
+@charset 'UTF-8';
+/*
+  Footer
+-----------------------------------------------------*/
+
+.l-footer {
+  background-color:$background-color-footer;
+  padding: set-size(60px) set-size(16px) set-size(92px);
+  color: #E3E3E3;
+
+  @include mq(tab) {
+   padding: set-size(120px) 0;
+  }
+
+  a {
+    color: #E3E3E3;
+    text-decoration: none;
+  }
+
+  &__wrapper {
+
+    @include mq(tab){
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__sns {
+    display: flex;
+    justify-content: space-around;
+
+    @include mq(tab){
+      display: flex;
+      justify-content: left;
+    }
+  }
+
+  &__twitter {
+    font-size: set-size(36px);
+
+    @include mq(tab){
+      margin-right: set-size(20px,36px);
+    }
+  }
+
+  &__facebook {
+    font-size: set-size(36px);
+  }
+
+  &__menu {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    font-size: set-size(14px);
+    margin-top: set-size(40px,14px);
+
+    @include mq(tab) {
+      display: block;
+      font-size: set-size(18px);
+      text-align: left;
+     }
+
+    li {
+     @include mq(tab) {
+      margin-bottom: set-size(20px,18px);
+    }
+
+    }
+  }
+
+  &__privacy {
+    text-align: center;
+    margin-top: set-size(20px,14px);
+    width: 100%;
+
+    @include mq(tab) {
+      margin: 0;
+    }
+
+  }
+
+  &__logo {
+    font-size: set-size(34px);
+    margin-bottom: set-size(8px,34px);
+    margin-top: set-size(55px,34px);
+    text-align: center;
+
+    @include mq(tab) {
+      font-size: set-size(44px);
+      margin-bottom: set-size(18px,44px);
+      margin-top: 0;
+    }
+
+  }
+
+
+  &__copyright {
+    font-size: set-size(12px);
+    text-align: center;
+  }
+
+  &__pagetop {
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+    z-index: 100;
+
+    @include mq(tab){
+      right: 93px;
+      bottom: 38px;
+    }
+
+  }
+
+}

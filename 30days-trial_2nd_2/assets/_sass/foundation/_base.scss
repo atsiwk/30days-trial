@@ -1,0 +1,51 @@
+@charset 'UTF-8';
+/*
+  Base
+-----------------------------------------------------*/
+
+*,
+:before,
+:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 100%;
+  -webkit-text-size-adjust: 100%;
+     -moz-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+          text-size-adjust: 100%;
+}
+
+body {
+  height: 100%;
+  font-family: $font-set-primary;
+  color: $primary-text-color;
+  font-size: $base-font-size;
+  line-height: 1.5;
+  background-color: $background-color;
+  // // 固定ヘッダー分の余白
+  // padding-top: set-size(48px);
+
+  // @include mq(tab) {
+  //   // 固定ヘッダー分の余白
+  //   padding-top: set-size(100px);
+  // }
+}
+
+
+img {
+  height: auto;
+  vertical-align: bottom;
+}
+
+a {
+  color: $primary-text-color;
+}
+
+[lang="en"] {
+  font-family: $font-set-english;
+}

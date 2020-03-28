@@ -1,0 +1,40 @@
+@charset 'UTF-8';
+/*  Comments  */
+
+.p-comments {
+  display: flex;
+
+  & + & {
+    margin-top: set-size(32px);
+
+    @include mq(tab) {
+      margin-top: set-size(80px);
+    }
+  }
+
+  &__image {
+
+
+    img {
+      width: set-size(56px);
+      height: set-size(56px);
+
+      @include mq(tab){
+        width: set-size(100px);
+        height: set-size(100px);
+      }
+    }
+  }
+
+  &__text {
+    font-size: set-size(14px);
+    margin-left: set-size(24px,14px);
+
+    @include mq(tab){
+      font-size: set-size(16px);
+      margin-left: set-size(50px,16px);
+    }
+  }
+
+
+}

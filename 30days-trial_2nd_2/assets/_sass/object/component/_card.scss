@@ -1,0 +1,29 @@
+@charset 'UTF-8';
+/*  Card  */
+
+.c-card {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  padding-top: percentage(234 / 422);
+
+  &__body {
+    padding: set-size(12px);
+
+    @include mq(tab){
+      padding: set-size(20px);
+    }
+  }
+
+  &__thumbnail {
+    position: absolute;
+    top:0;
+    width: 100%;
+
+    img {
+      width: 100%;
+    }
+
+  }
+}
