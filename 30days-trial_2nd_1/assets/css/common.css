@@ -173,7 +173,6 @@ a {
   transition: transform .3s ease-in-out;
   transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
   -webkit-transform: translateX(100%);
-      -ms-transform: translateX(100%);
           transform: translateX(100%);
 }
 
@@ -197,7 +196,6 @@ a {
     padding: 0;
     background-color: transparent;
     -webkit-transform: translateX(0);
-        -ms-transform: translateX(0);
             transform: translateX(0);
     display: -webkit-box;
     display: -ms-flexbox;
@@ -228,14 +226,12 @@ a {
   .l-globalNav li a:hover {
     background-color: transparent;
     -webkit-transform: scale(1, 1);
-        -ms-transform: scale(1, 1);
             transform: scale(1, 1);
   }
 }
 
 .is-active-drawer .l-globalNav {
   -webkit-transform: translateX(0);
-      -ms-transform: translateX(0);
           transform: translateX(0);
 }
 
@@ -625,7 +621,6 @@ a {
   width: 12px;
   height: 12px;
   -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
           transform: rotate(45deg);
 }
 
@@ -679,7 +674,6 @@ a {
   bottom: -0.73333em;
   left: 50%;
   -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
           transform: translateX(-50%);
   display: block;
   height: 5px;
@@ -822,13 +816,11 @@ a {
 
 .is-active-drawer .p-hamburger__Line:before {
   -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
           transform: rotate(45deg);
 }
 
 .is-active-drawer .p-hamburger__Line:after {
   -webkit-transform: rotate(-45deg);
-      -ms-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
 
@@ -850,7 +842,6 @@ a {
   .p-hero__body {
     top: 50%;
     -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
             transform: translateY(-50%);
   }
 }
@@ -1467,7 +1458,6 @@ a {
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
           transform: translateY(-50%);
   width: 30px;
 }
@@ -1484,7 +1474,6 @@ a {
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
           transform: translateY(-50%);
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
@@ -1518,7 +1507,6 @@ a {
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
           transform: translateY(-50%);
   width: 1.875em;
 }
@@ -1535,7 +1523,6 @@ a {
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%) rotate(-45deg);
-      -ms-transform: translateY(-50%) rotate(-45deg);
           transform: translateY(-50%) rotate(-45deg);
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
@@ -1630,7 +1617,6 @@ a {
   bottom: -1em;
   left: 50%;
   -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
           transform: translateX(-50%);
   display: block;
   height: 2px;
@@ -1699,7 +1685,6 @@ a {
   top: 0;
   right: 0;
   -webkit-transform: translate(50%, -50%);
-      -ms-transform: translate(50%, -50%);
           transform: translate(50%, -50%);
   width: 2.6875em;
   height: 2.6875em;
