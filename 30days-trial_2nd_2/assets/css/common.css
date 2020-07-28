@@ -179,6 +179,10 @@ a {
   width: 80%;
   height: 100%;
   background-color: #fff;
+  -webkit-transition: -webkit-transform .3s ease-in-out;
+  transition: -webkit-transform .3s ease-in-out;
+  transition: transform .3s ease-in-out;
+  transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
   z-index: 20;
@@ -250,13 +254,14 @@ a {
   }
 }
 
+.resize-animation-stopper * {
+  -webkit-transition: none;
+  transition: none;
+}
+
 .is-active-drawer .l-globalNav {
   -webkit-transform: translateX(0);
           transform: translateX(0);
-  -webkit-transition: -webkit-transform .3s ease-in-out;
-  transition: -webkit-transform .3s ease-in-out;
-  transition: transform .3s ease-in-out;
-  transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
 }
 
 .js-menu a.border:before {

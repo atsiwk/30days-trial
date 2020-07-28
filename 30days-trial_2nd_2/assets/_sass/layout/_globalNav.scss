@@ -13,6 +13,7 @@
   width: 80%;
   height: 100%;
   background-color: $background-color-drawer;
+  transition: transform .3s ease-in-out;
   transform: translateX(100%);
   z-index: 20;
 
@@ -85,9 +86,12 @@
 
 }
 
+.resize-animation-stopper * {
+  transition: none;
+}
+
 .is-active-drawer .l-globalNav {
   transform: translateX(0);
-  transition: transform .3s ease-in-out;
 }
 
 .js-menu a.border:before {
